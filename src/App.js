@@ -5,7 +5,7 @@ const ENV = 'PROD'
 
 function App() {
 
-  const PICKLIST_URL = ((ENV === 'DEV') ? 'http://localhost:5000' : 'http://hillcrestsports-picklist.herokuapp.com')
+  const PICKLIST_URL = ((ENV === 'DEV') ? 'http://localhost:5000' : 'https://hillcrestsports-picklist.herokuapp.com')
 
   function Picklist() {
     const [picks,setPicks] = useState([])
