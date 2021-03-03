@@ -4,6 +4,69 @@
   flex-direction: column;
 }
 
+/* .picklist {
+  background-color: #F2F2F2;
+} */
+
+.pick {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: #2C5063;
+  margin: 10px 0px 10px 0px;
+  background-color: #4C86A8;
+  position: relative;
+}
+
+.sku {
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  font-size: 16px;
+  border-radius: 5px;
+  /* width: auto; */
+  font-weight: bold;
+  height: 25px;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-justify: center;
+  background-color: #FFBA00;
+  color: #000000;
+}
+
+.qty {
+  top: 45px;
+  left: 15px;
+  position: absolute;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  text-justify: center;
+  background-color: #FA3E3E;
+  color: #FFFFFF;
+}
+
+.app_num_other_items {
+  bottom: 10px;
+  right: 20px;
+  position: absolute;
+  color: #E5F0F3;
+}
+.data {
+  font-size: 16px;
+  margin: 10px;
+  color: #E5F0F3;
+}
+
 img {
-  width: 300px;
+  /* width: 300px; */
+  max-width: 100%;
+  margin: 5px;
+  border-radius: 5px;
 }

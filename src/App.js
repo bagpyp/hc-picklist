@@ -20,40 +20,50 @@ function App() {
 
 
     return (
-      <div className="Picklist">
+      <div className="picklist">
         {picks.map((x,index) => (
-          <div className = "Pick" key={index}>
-            <img src={x['v_image_url']} alt="product"></img>
-            <div className = "data">
-              <div className = "channel">{x["channel"]} order with ID: {x["id"]} is {x["status"]}</div>
-              <div className = "id"></div>
-              {/* <div className = "payment_id">{x["payment_id"]}</div> */}
-              {/* <div className = "payment_zone">{x["payment_zone"]}</div> */}
-              {/* <div className = "amt_total">{x["amt_total"]}</div> */}
-              {/* <div className = "order_id">{x["order_id"]}</div> */}
-              <div className = "CAT">category: {x["CAT"]}</div>
-              <div className = "BRAND">brand: {x["BRAND"]}</div>
-              <div className = "name">name: {x["name"]}</div>
-              <div className = "year">year: {x["year"]}</div>
-              <div className = "size">size: {x["size"]}</div>
-              <div className = "color">color: {x["color"]}aka ({x["alt_color"]})</div>
-              <div className = "sku">SKU: {x["sku"]}</div>
-              <div className = "qty">ON ORDER: x{x["qty"]}</div>
-              <div className = "amt_per">Sold at price: {x["amt_per"]}</div>
-              <div className = "created_date">date/time: {x["created_date"]}</div>
-              <div className = "num_items">{x["num_items"]-1} other item(s) on this order</div>
-              {/* <div className = "total_amt">{x["total_amt"]}</div> */}
-              <div className = "qty0">RP qty is now: {x["qty0"]}</div>
-            </div>  
-          </div>
+        <div className = "pick" key={index}>
+
+          <img src={x['v_image_url']} alt="product"></img>
+          <div className = "sku">{x["sku"]}</div>
+          <div className = "qty">{x["qty"]}</div>
+          {x["app_num_other_items"] ? <div className = "app_num_other_items">1/{x["app_num_other_items"]}</div> : <div className = "app_num_other_items"></div>}
+
+          
+
+          <div className = "data">
+            {/* <div className = "channel">{x["channel"]}</div> */}
+            {/* <div className = "id">{x["id"]}</div> */}
+            <div className = "tag">{x["tag"]}</div>
+            <div className = "app_name">{x["app_name"]}</div>
+            {/* <div className = "payment_zone">{x["payment_zone"]}</div> */}
+            <div className = "CAT">{x["CAT"]}</div>
+            <div className = "BRAND">Brand: {x["BRAND"]}</div>
+            {/* <div className = "year">{x["year"]}</div> */}
+            <div className = "size">Size: {x["size"]}</div>
+            <div className = "app_color">Color: {x["app_color"]}</div>
+            {/* <div className = "color">{x["color"]}</div>
+            <div className = "alt_color">{x["alt_color"]}</div> */}
+            <div className = "sku">{x["sku"]}</div>
+
+            <div className = "amt_per">{x["amt_per"]}</div>
+            <div className = "qty0">RP qty: {x["qty0"]}</div>
+
+            <div className = "created_date">{new Date(x["created_date"]).toLocaleDateString('en-US')}</div>
+
+          </div>  
+
+        </div>
         ))}
       </div>
     )
-
   }
 
   return (
     <div>
+      <h4>
+        Last Updated {new Date().toLocaleString('en-US')}
+      </h4>
       <Picklist />
     </div>
   );
