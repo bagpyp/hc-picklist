@@ -5,7 +5,7 @@ const ENV = 'PROD'
 
 function App() {
 
-  const PICKLIST_URL = ((ENV === 'DEV') ? 'http://localhost:5000/' : 'https://hillcrestsports-picklist.herokuapp.com/')
+  const PICKLIST_URL = ((ENV === 'DEV') ? 'http://localhost:5000/picklist' : 'https://hillcrestsports-api.herokuapp.com/picklist/')
   const [date,setDate] = useState('')
 
   function Picklist() {
@@ -23,12 +23,11 @@ function App() {
 
     function Pick(x) {
 
-      // const [picked, setPicked] = useState(x['picked'])
       const id = x['app_id']
       var picked = x['picked']
 
       const togglePicked = async () => {
-        const res = await fetch(PICKLIST_URL+'pick?app_id='+id, {method:'PUT'})
+        const res = await fetch(PICKLIST_URL+'/pick?app_id='+id, {method:'PUT'})
         const json_res = await res.json()
         picked = json_res
         setA(a+1)

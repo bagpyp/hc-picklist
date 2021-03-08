@@ -1,9 +1,0 @@
-{
-  "short_name": "Picklist",
-  "name": "All current orders",
-  "icons": [],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
