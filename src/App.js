@@ -35,7 +35,6 @@ function App() {
 
       return (
         <div className = {(picked || x['picked']) ? 'pick picked' : 'pick'} key={id}>
-
           <img src={x['v_image_url']} alt="product"></img>
           <div className = "sku">{x["sku"]}</div>
           <div className = "qty">{x["qty"]}</div>
@@ -48,8 +47,7 @@ function App() {
             <div className = "app_color">{x["app_color"]}</div>
             <div className = "CAT">{x["CAT"]}</div>
             <div className = "BRAND">{x["BRAND"]}</div>
-            <div className = "amt_per">{x["amt_per"]}</div>
-            <div className = "qty0">{x["qty0"]} left</div>
+            <div className = "qty0">{parseInt(x["qty0"]).toString()} left</div>
           </div>  
 
           <div className = "buttons">
