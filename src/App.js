@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 
-const ENV = 'PROD'
+const ENV = 'DEV'
 
 function App() {
 
